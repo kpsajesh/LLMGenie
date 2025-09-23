@@ -1,0 +1,51 @@
+[
+  {
+    "id": "TC-001",
+    "title": "Successful login with valid credentials",
+    "steps": ["Navigate to login page", "Enter valid email", "Enter valid password", "Click login button"],
+    "expected": "User is redirected to dashboard",
+    "priority": "High"
+  },
+  {
+    "id": "TC-002",
+    "title": "Login with invalid email",
+    "steps": ["Navigate to login page", "Enter invalid email", "Enter valid password", "Click login button"],
+    "expected": "Error message for invalid credentials is displayed",
+    "priority": "Medium"
+  },
+  {
+    "id": "TC-003",
+    "title": "Login with incorrect password",
+    "steps": ["Navigate to login page", "Enter valid email", "Enter incorrect password", "Click login button"],
+    "expected": "Error message for invalid credentials is displayed",
+    "priority": "Medium"
+  },
+  {
+    "id": "TC-004",
+    "title": "Account lock after 3 failed login attempts",
+    "steps": ["Navigate to login page", "Enter valid email", "Enter incorrect password", "Click login button", "Repeat incorrect password entry two more times"],
+    "expected": "Account is locked for 10 minutes",
+    "priority": "High"
+  },
+  {
+    "id": "TC-005",
+    "title": "Reset password via Forgot Password link",
+    "steps": ["Navigate to login page", "Click on Forgot Password link", "Enter registered email", "Submit reset request"],
+    "expected": "Password reset email is sent to the registered email",
+    "priority": "Medium"
+  },
+  {
+    "id": "TC-006",
+    "title": "Error message for empty email field",
+    "steps": ["Navigate to login page", "Leave email field empty", "Enter valid password", "Click login button"],
+    "expected": "Error message for empty email is displayed",
+    "priority": "Low"
+  },
+  {
+    "id": "TC-007",
+    "title": "Error message for empty password field",
+    "steps": ["Navigate to login page", "Enter valid email", "Leave password field empty", "Click login button"],
+    "expected": "Error message for empty password is displayed",
+    "priority": "Low"
+  }
+]

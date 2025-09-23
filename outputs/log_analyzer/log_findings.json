@@ -1,0 +1,56 @@
+{
+  "groups": [
+    {
+      "signature": "starting application qa agent",
+      "count": 1,
+      "levels": {
+        "INFO": 1,
+        "WARN": 0,
+        "ERROR": 0
+      },
+      "examples": [
+        "2025-08-20 08:00:01 [INFO]  Starting application: qa-agent-service v1.2.0"
+      ],
+      "probable_root_cause": "Normal application startup.",
+      "recommendation": "No action needed; application started successfully."
+    },
+    {
+      "signature": "database connection pool initialized",
+      "count": 1,
+      "levels": {
+        "INFO": 1,
+        "WARN": 0,
+        "ERROR": 0
+      },
+      "examples": [
+        "2025-08-20 08:00:03 [INFO]  Database connection pool initialized (size=10)"
+      ],
+      "probable_root_cause": "Database connection pool setup completed.",
+      "recommendation": "No action needed; database connection pool initialized successfully."
+    },
+    {
+      "signature": "failed to warm cache",
+      "count": 1,
+      "levels": {
+        "INFO": 0,
+        "WARN": 0,
+        "ERROR": 1
+      },
+      "examples": [
+        "2025-08-20 08:00:05 [ERROR] Failed to warm cache: redis://localhost:6379 - ConnectionRefusedError"
+      ],
+      "probable_root_cause": "Redis server is not reachable.",
+      "recommendation": "Check Redis server status and connectivity."
+    }
+  ],
+  "summary": {
+    "total_events": 10,
+    "error_rate": 0.1,
+    "top_signatures": [
+      "failed to warm cache",
+      "starting application qa agent",
+      "database connection pool initialized"
+    ],
+    "short_summary": "There were 10 total events logged with 1 error. The error rate is 10%. The main issue was a failure to warm the cache."
+  }
+}
