@@ -3,6 +3,9 @@ import os
 from typing import Any, Dict
 from src.core.utils import http_post_json
 
+
+
+
 JIRA_BASE = os.getenv("JIRA_BASE", "http://localhost:4001")
 JIRA_PROJECT_KEY = os.getenv("JIRA_PROJECT_KEY", "QA")
 
