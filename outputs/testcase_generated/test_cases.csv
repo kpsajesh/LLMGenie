@@ -1,8 +1,8 @@
 TestID,Title,Steps,Expected,Priority
 TC-001,Successful login with valid credentials,Navigate to login page | Enter valid email | Enter valid password | Click login button,User is redirected to dashboard,High
 TC-002,Login with invalid email,Navigate to login page | Enter invalid email | Enter valid password | Click login button,Error message for invalid credentials is displayed,Medium
-TC-003,Login with incorrect password,Navigate to login page | Enter valid email | Enter incorrect password | Click login button,Error message for invalid credentials is displayed,Medium
-TC-004,Account lock after 3 failed login attempts,Navigate to login page | Enter valid email | Enter incorrect password | Click login button | Repeat incorrect password entry two more times,Account is locked for 10 minutes,High
+TC-003,Login with invalid password,Navigate to login page | Enter valid email | Enter invalid password | Click login button,Error message for invalid credentials is displayed,Medium
+TC-004,Account lock after 3 failed login attempts,Navigate to login page | Enter valid email | Enter invalid password | Click login button | Repeat invalid password entry two more times,Account is locked for 10 minutes,High
 TC-005,Reset password via Forgot Password link,Navigate to login page | Click on Forgot Password link | Enter registered email | Submit reset request,Password reset email is sent to the registered email,Medium
-TC-006,Error message for empty email field,Navigate to login page | Leave email field empty | Enter valid password | Click login button,Error message for empty email is displayed,Low
-TC-007,Error message for empty password field,Navigate to login page | Enter valid email | Leave password field empty | Click login button,Error message for empty password is displayed,Low
+TC-006,Error message for locked account,Navigate to login page | Enter valid email | Enter valid password | Click login button | Wait for 10 minutes | Attempt to log in again,Error message indicating account is locked is displayed,High
+TC-007,Multiple invalid login attempts,Navigate to login page | Enter valid email | Enter invalid password | Click login button | Repeat invalid password entry three times,Account is locked after third invalid attempt,High

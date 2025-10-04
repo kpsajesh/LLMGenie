@@ -15,15 +15,15 @@
   },
   {
     "id": "TC-003",
-    "title": "Login with incorrect password",
-    "steps": ["Navigate to login page", "Enter valid email", "Enter incorrect password", "Click login button"],
+    "title": "Login with invalid password",
+    "steps": ["Navigate to login page", "Enter valid email", "Enter invalid password", "Click login button"],
     "expected": "Error message for invalid credentials is displayed",
     "priority": "Medium"
   },
   {
     "id": "TC-004",
     "title": "Account lock after 3 failed login attempts",
-    "steps": ["Navigate to login page", "Enter valid email", "Enter incorrect password", "Click login button", "Repeat incorrect password entry two more times"],
+    "steps": ["Navigate to login page", "Enter valid email", "Enter invalid password", "Click login button", "Repeat invalid password entry two more times"],
     "expected": "Account is locked for 10 minutes",
     "priority": "High"
   },
@@ -36,16 +36,16 @@
   },
   {
     "id": "TC-006",
-    "title": "Error message for empty email field",
-    "steps": ["Navigate to login page", "Leave email field empty", "Enter valid password", "Click login button"],
-    "expected": "Error message for empty email is displayed",
-    "priority": "Low"
+    "title": "Error message for locked account",
+    "steps": ["Navigate to login page", "Enter valid email", "Enter valid password", "Click login button", "Wait for 10 minutes", "Attempt to log in again"],
+    "expected": "Error message indicating account is locked is displayed",
+    "priority": "High"
   },
   {
     "id": "TC-007",
-    "title": "Error message for empty password field",
-    "steps": ["Navigate to login page", "Enter valid email", "Leave password field empty", "Click login button"],
-    "expected": "Error message for empty password is displayed",
-    "priority": "Low"
+    "title": "Multiple invalid login attempts",
+    "steps": ["Navigate to login page", "Enter valid email", "Enter invalid password", "Click login button", "Repeat invalid password entry three times"],
+    "expected": "Account is locked after third invalid attempt",
+    "priority": "High"
   }
 ]

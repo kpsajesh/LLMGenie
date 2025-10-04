@@ -17,7 +17,7 @@
 # 4. set OPENAI_API_KEY in .env variable ( This may not be required for Ollama, but just in case you want to test OpenAI also)
 # $env:OPENAI_API_KEY="your_api_key_here" 
 # 5. Check the Open AI API is set correctly
-# echo $OPENAI_API_KEY  > would show the saved API key (Not showing all the times because of some reason)
+# echo $env:OPENAI_API_KEY  > would show the saved API key
 # 6 Now run the ollama.
 # open powershell seperately from run window > – Windows +R > powershell
 # 6.a Type ollama > run > shows the commands
