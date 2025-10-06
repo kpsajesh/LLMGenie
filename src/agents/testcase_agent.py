@@ -10,21 +10,27 @@
 # 3 If any error in activating virtual environment, run this command in PowerShell: 
 # Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
 # 4. install dependencies one by one
-# pip install langchain
-# pip install langchain-openai
-# pip install langchain-ollama
-# pip install python-dotenv
-# 4. set OPENAI_API_KEY in .env variable ( This may not be required for Ollama, but just in case you want to test OpenAI also)
-# $env:OPENAI_API_KEY="your_api_key_here" 
-# 5. Check the Open AI API is set correctly
-# echo $env:OPENAI_API_KEY  > would show the saved API key
-# 6 Now run the ollama.
+# pip install langchain langchain-openai langchain-ollama python-dotenv langgraph rich loguru
+# -here rich and loguru dependancies are to see logs in a better organised way
+# 5. TO see the versions of installed packages
+# pip show  langchain langchain-openai langchain-ollama python-dotenv langgraph rich loguru
+# 6. set OPENAI_API_KEY in .env variable ( This may not be required for Ollama, but just in case you want to test OpenAI also)
+#   $env:OPENAI_API_KEY="your_api_key_here" 
+#   6.a Check the Open AI API is set correctly
+# echo $env:OPENAI_API_KEY  > would show the saved API key 
+# 7 Now run the ollama.
 # open powershell seperately from run window > – Windows +R > powershell
-# 6.a Type ollama > run > shows the commands
-# 6.b Type ollama run mistral:7b  (this will start the ollama server)
-# 6.c Type a sample prompt like "What is machine learning?" to check whether it is working fine.
-# 7. Now run the file (make sure ollama is running before the runnning this command)
+#   7.a Type ollama > run > shows the commands
+#   7.b Type ollama run mistral:7b  (this will start the ollama server)
+#   7.c Type a sample prompt like "What is machine learning?" to check whether it is working fine.
+# 8. Now run the file (make sure ollama is running before the runnning this command)
 # python -m src.agents.testcase_agent --input data/requirements/login.txt
+
+# The project contains a demo API services for Testrail, Jira and Slack
+# GO to JiraTestrailSlackAPI-ToTest folder in this project > double click start-all.bat > will start all the API services, to see
+#   Testrail UI, open browser and type http://localhost:4001/ui & API can be seen from http://localhost:4001/docs#
+#   Jira UI, open browser and type http://localhost:4002/ui & API can be seen from http://localhost:4002/docs#
+#   Slack UI, open browser and type http://localhost:4003/ui & API can be seen from http://localhost:4003/docs#
 
 from __future__ import annotations
 
